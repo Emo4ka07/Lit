@@ -5,24 +5,9 @@
 2)	Незарегистрированный пользователь переходит на сайт, по ссылке с главной страницы переходит на форму регистрации, при успешной регистрации переходит на главную страницу. В публикациях появляется возможность оставлять комментарии, на главной странице появляется ссылка на личный кабинет с возможностью добавлять собственные публикации.
 3)	Модератор может удалять публикации и комментарии, нарушающие правила ресурса.
 # Интерфейс
-Главная страница
-![image](https://github.com/Emo4ka07/Lit/assets/154008787/5327faa9-06b9-4d6b-bcd5-6958a5604493) 
-Формы входа и регистрации
-![image](https://github.com/Emo4ka07/Lit/assets/154008787/d808811a-5412-4540-8df1-80644727f75a) 
-Профиль
-![image](https://github.com/Emo4ka07/Lit/assets/154008787/22745261-7d02-4e1e-a653-f4a24ff099ee) 
-Профиль другого пользователя
-![image](https://github.com/Emo4ka07/Lit/assets/154008787/1030e953-cb9f-4cf6-9dec-d6ba0149ba4d) 
-Добавление публикации
-![image](https://github.com/Emo4ka07/Lit/assets/154008787/d9223525-592a-4592-823f-55fabc65e2c8) 
-Публикация
-![image](https://github.com/Emo4ka07/Lit/assets/154008787/ffd40f79-21f8-468d-a021-7c44264d3127) 
-Интерфейс модератора
-![image](https://github.com/Emo4ka07/Lit/assets/154008787/45bfb207-d46f-4f2d-a0f5-3c2a3768e1f9)
+![image](https://github.com/Emo4ka07/Lit/assets/154008787/4229babc-7060-4292-a763-1d19e10c1693)
 # UML диаграммы
-Диаграмма классов
 ![image](https://github.com/Emo4ka07/Lit/assets/154008787/0c7f5a7d-0fb2-4511-8f4b-be256c29c0b5)
-Диаграмма последовательностей
 sequenceDiagram
     participant "User" as User
     participant "Main Page" as MainPage
