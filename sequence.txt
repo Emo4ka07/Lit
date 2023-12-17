@@ -1,0 +1,69 @@
+title Literature web-site
+
+sequenceDiagram
+    participant "User" as User
+    participant "Main Page" as MainPage
+    participant "Publication" as Publication
+    participant "Registration Form" as RegistrationForm
+    participant "Personal Account" as PersonalAccount
+    participant "Login Page" as LoginPage
+    participant "Authentication System" as AuthSystem
+
+    activate User
+    User->MainPage: Visit site
+    activate MainPage
+    MainPage-->User: Display main page with links to login, registration, and latest publications
+
+    User->Publication: Click on publication title
+    activate Publication
+    Publication-->User: Display full version of publication and comments
+    deactivate Publication
+
+    User->RegistrationForm: Click on registration link
+    activate RegistrationForm
+    RegistrationForm-->User: Display registration form
+
+    User->RegistrationForm: Fill in registration details
+    User->RegistrationForm: Submit registration form
+    RegistrationForm-->User: Successful registration
+    RegistrationForm-->MainPage: Redirect to main page after registration
+    deactivate RegistrationForm
+
+    MainPage-->User: Main page with comment capability and link to personal account
+    deactivate MainPage
+
+    User->PersonalAccount: Click on personal account link
+    activate PersonalAccount
+    PersonalAccount-->User: Display personal account page with option to add publications
+
+    User->PersonalAccount: Add own publication
+    PersonalAccount-->User: Publication added successfully
+    deactivate PersonalAccount
+
+    User->MainPage: Visit site
+    activate MainPage
+    MainPage-->User: Display main page with links to login, registration, and latest publications
+    deactivate MainPage
+
+    User->LoginPage: Click on login link
+    activate LoginPage
+    LoginPage-->User: Display login form
+
+    alt Incorrect password entered
+        User->LoginPage: Enter incorrect password
+        LoginPage->AuthSystem: Authenticate User
+        activate AuthSystem
+        AuthSystem-->LoginPage: Incorrect Password
+        LoginPage-->User: Display error message
+        deactivate AuthSystem
+    else Correct password entered initially
+        User->LoginPage: Enter correct password
+        LoginPage->AuthSystem: Authenticate User
+        activate AuthSystem
+        AuthSystem-->LoginPage: Successful Authentication
+        LoginPage-->User: Redirect to user's page
+        deactivate AuthSystem
+    end
+    deactivate LoginPage
+    
+    
